@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="bootstrap-switch.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://use.fontawesome.com/7f77168816.js"></script>
+<script src="bootstrap-switch.min.js"></script>
+  <link rel="stylesheet" href="styles.css">
+  <title>INRlink</title>
+</head>
+<body>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">INRlink</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+<div class="col-sm-12">
+  <h2>Record your INR.</h2>
+  <span class="info"><i class="fa fa-info-circle" aria-hidden="true"></i><span> Please answer all questions</span></span>
+  <hr>
+</div>
+<form class="form-horizontal">
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="pin">PIN</label>
+    <div class="col-sm-10">
+      <input type="number" class="form-control fifty" id="pin" placeholder="Enter PIN">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="pwd">Date</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control fifty" id="date" placeholder="Date">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="pwd">INR</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control fifty" id="inr" placeholder="Enter INR value">
+    </div>
+  </div>
+<br><br>
+<div class="form-check">
+    <div class="col-sm-offset-2 col-sm-10">
+    <span class="info"><i class="fa fa-info-circle" aria-hidden="true"></i></span><span class="qtext"> Have you missed any warfarin doses?</span>
+    <span class="switch"><input class="form-check-input" type="checkbox" value="" name="cb"></span>
+</div>
+</div>
+<br><br><br>
+<div class="form-check">
+    <div class="col-sm-offset-2 col-sm-10">
+    <span class="info"><i class="fa fa-info-circle" aria-hidden="true"></i></span><span class="qtext"> Have you taken too many warfarin tablets?</span>
+    <span class="switch"><input class="form-check-input" type="checkbox" value="" name="cb"></span>
+</div>
+</div>
+<br><br><br>
+<div class="form-check">
+    <div class="col-sm-offset-2 col-sm-10">
+    <span class="info"><i class="fa fa-info-circle" aria-hidden="true"></i></span><span class="qtext"> Have you experienced any bruising or bleeding?</span>
+    <span class="switch"><input class="form-check-input" type="checkbox" value="" name="cb"></span>
+</div>
+</div>
+<br><br><br>
+<div class="form-check">
+    <div class="col-sm-offset-2 col-sm-10">
+    <span class="info"><i class="fa fa-info-circle" aria-hidden="true"></i></span><span class="qtext"> Have you had any changes to your medication?</span>
+    <span class="switch"><input class="form-check-input" type="checkbox" value="" name="cb"></span>
+</div>
+</div>
+<br><br><br>
+<div class="form-check">
+    <div class="col-sm-offset-2 col-sm-10">
+    <span class="info"><i class="fa fa-info-circle" aria-hidden="true"></i></span><span class="qtext"> Have you started taking any non-prescription or herbal medications?</span>
+    <span class="switch"><input class="form-check-input" type="checkbox" value="" name="cb"></span>
+</div>
+</div>
+<br><br><br>
+<div class="form-check">
+    <div class="col-sm-offset-2 col-sm-10">
+    <span class="info"><i class="fa fa-info-circle" aria-hidden="true"></i></span><span class="qtext"> Have you been admitted to hospital or had any surgical procedures?</span>
+    <span class="switch"><input class="form-check-input" type="checkbox" value="" name="cb"></span>
+</div>
+</div>
+<br><br><br>
+<div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+  <label class="info" for="comment">Please enter details for any Yes answers</label>
+  <textarea class="form-control eighty" rows="5" id="comment"></textarea>
+</div>
+</div>
+
+
+
+
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-info">Post Answers <i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+    </div>
+  </div>
+</form>
+</body>
+<script>
+  $('.form-check-input').bootstrapSwitch({onColor: 'danger', onText: 'Yes', offText: 'No'});
+</script>
+</html>

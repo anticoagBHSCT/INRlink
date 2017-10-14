@@ -1,0 +1,21 @@
+.info {
+  color: blue;
+}
+
+.qtext {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.fifty {
+  width: 50%;
+}
+
+.eighty {
+  width: 80%;
+}
+
+/*.switch {
+  float: right;
+  margin-right: 55%;
+}*/
