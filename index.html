@@ -4,11 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- for ios 7 style, multi-resolution icon of 152x152 -->
+  <meta name="apple-mobile-web-app-title" content="anticoag clinic">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-barstyle" content="black-translucent">
+  <link rel="apple-touch-icon" href="logo152.png">
+  <!-- for Chrome on Android, multi-resolution icon of 196x196 -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="shortcut icon" sizes="196x196" href="logo196.png">
+  <!-- windows live tile-->
+  <meta name="application-name" content="anticoag clinic">
+  <meta name="msapplication-TileImage" content="logo196.png">
+  <meta name="msapplication-TileColor" content="#8a8a8a">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="bootstrap-switch.min.css">
+  <link rel="stylesheet" href="jquery.toast.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="https://use.fontawesome.com/7f77168816.js"></script>
+<script src="jquery.toast.min.js"></script>
 <script src="bootstrap-switch.min.js"></script>
   <link rel="stylesheet" href="styles.css">
   <title>RBHSC INR Capture</title>
@@ -21,8 +35,8 @@
       </div>
       <ul class="nav navbar-nav">
         <li class="active"><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
   </nav>
@@ -34,7 +48,7 @@
 <form class="form-horizontal">
   <div class="form-group">
     <label class="control-label col-sm-2" for="pin">PIN</label>
-    <div class="col-sm-10">
+    <div class="col-sm-8">
       <input type="number" class="form-control fifty" id="pin" placeholder="Enter PIN">
     </div>
   </div>
@@ -113,14 +127,14 @@
 </div>
   <div class="form-group">
     <label class="control-label col-sm-2" for="pwd">Date</label>
-    <div class="col-sm-10">
+    <div class="col-sm-8">
       <input type="text" class="form-control fifty" id="date" placeholder="Date">
     </div>
   </div>
   <div class="form-group">
     <label class="control-label col-sm-2" for="pwd">INR</label>
-    <div class="col-sm-10">
-      <input type="text" class="form-control fifty" id="inr" placeholder="Enter INR value">
+    <div class="col-sm-8">
+      <input type="number" step="0.1" class="form-control fifty" id="inr" placeholder="Enter INR value">
     </div>
   </div>
 <br>
@@ -195,23 +209,25 @@
 </div>
 <br><br><br>
 <div class="form-group">
-      <div class="col-sm-offset-2 col-sm-10">
+      <div class="col-sm-offset-2 col-sm-6">
   <label class="info" for="comment">Please enter details for any Yes answers</label>
-  <textarea class="form-control eighty" rows="5" id="comment"></textarea>
+  <textarea class="form-control eighty" rows="3" id="comment"></textarea>
 </div>
 </div>
-
-
-
-
+</form>
   <div class="form-group">
     <div class="col-sm-offset-2 col-sm-10">
-      <button type="submit" class="btn btn-info">Post Answers <i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+      <button id="submit" class="btn btn-primary">Post Answers <i class="fa fa-paper-plane" aria-hidden="true"></i></button>
     </div>
   </div>
-</form>
 </body>
 <script>
   $('.form-check-input').bootstrapSwitch({onColor: 'danger', onText: 'Yes', offText: 'No'});
+  $('#submit').click(function(){$.toast({
+heading: 'Success',
+text: 'The INR has been submitted',
+showHideTransition: 'slide',
+icon: 'success'
+  });});
 </script>
 </html>
