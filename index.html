@@ -11,13 +11,13 @@
 <script src="https://use.fontawesome.com/7f77168816.js"></script>
 <script src="bootstrap-switch.min.js"></script>
   <link rel="stylesheet" href="styles.css">
-  <title>INRlink</title>
+  <title>RBHSC INR Capture</title>
 </head>
 <body>
   <nav class="navbar navbar-inverse">
     <div class="container-fluid">
       <div class="navbar-header">
-        <a class="navbar-brand" href="#">INRlink</a>
+        <a class="navbar-brand" href="#">RBHSC INR Capture</a>
       </div>
       <ul class="nav navbar-nav">
         <li class="active"><a href="#">Home</a></li>
@@ -43,12 +43,38 @@
     <label class="control-label col-sm-2">DOB</label>
   <div class="form-group"><div class="col-sm-4">
     <select class="form-control ten" id="day">
-      <option selected>Day</option>
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
+      <option selected disabled>Day</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+      <option value="10">10</option>
+      <option value="11">11</option>
+      <option value="12">12</option>
+      <option value="13">13</option>
+      <option value="14">14</option>
+      <option value="15">15</option>
+      <option value="16">16</option>
+      <option value="17">17</option>
+      <option value="18">18</option>
+      <option value="19">19</option>
+      <option value="20">20</option>
+      <option value="21">21</option>
+      <option value="22">22</option>
+      <option value="23">23</option>
+      <option value="24">24</option>
+      <option value="25">25</option>
+      <option value="26">26</option>
+      <option value="27">27</option>
+      <option value="28">28</option>
+      <option value="29">29</option>
+      <option value="30">30</option>
+      <option value="31">31</option>
     </select>
   </div>
 </div>
@@ -56,11 +82,18 @@
     <div class="col-sm-4">
     <select class="form-control ten" id="month">
       <option selected>Month</option>
-      <option>Jan</option>
-      <option>Feb</option>
-      <option>Mar</option>
-      <option>Apr</option>
-      <option>May</option>
+<option value="Jan">Jan</option>
+<option value="Feb">Feb</option>
+<option value="Mar">Mar</option>
+<option value="Apr">Apr</option>
+<option value="May">May</option>
+<option value="Jun">Jun</option>
+<option value="Jul">Jul</option>
+<option value="Aug">Aug</option>
+<option value="Sep">Sep</option>
+<option value="Oct">Oct</option>
+<option value="Nov">Nov</option>
+<option value="Dec">Dec</option>
     </select>
   </div>
   </div>
@@ -78,9 +111,6 @@
   </div>
 
 </div>
-
-
-
   <div class="form-group">
     <label class="control-label col-sm-2" for="pwd">Date</label>
     <div class="col-sm-10">
@@ -93,7 +123,7 @@
       <input type="text" class="form-control fifty" id="inr" placeholder="Enter INR value">
     </div>
   </div>
-<br><br>
+<br>
 <div class="form-row">
 <div class="form-check">
     <div class="col-sm-offset-2 col-sm-3">
@@ -108,7 +138,55 @@
 <div class="form-row">
 <div class="form-check">
     <div class="col-sm-offset-2 col-sm-3">
+    <span class="info"><i class="fa fa-info-circle" aria-hidden="true"></i></span><span class="qtext"> Have you taken too many warfarin tablets?</span>
+  </div>
+<div class="col-sm-7">
+    <span class="switch"><input class="form-check-input" type="checkbox" value="" name="cb"></span>
+</div>
+</div>
+</div>
+<br><br><br>
+
+<div class="form-row">
+<div class="form-check">
+    <div class="col-sm-offset-2 col-sm-3">
+    <span class="info"><i class="fa fa-info-circle" aria-hidden="true"></i></span><span class="qtext"> Have you experienced any bleeding or bruising?</span>
+  </div>
+<div class="col-sm-7">
+    <span class="switch"><input class="form-check-input" type="checkbox" value="" name="cb"></span>
+</div>
+</div>
+</div>
+<br><br><br>
+
+<div class="form-row">
+<div class="form-check">
+    <div class="col-sm-offset-2 col-sm-3">
+    <span class="info"><i class="fa fa-info-circle" aria-hidden="true"></i></span><span class="qtext"> Have you had any changes to your medications?</span>
+  </div>
+<div class="col-sm-7">
+    <span class="switch"><input class="form-check-input" type="checkbox" value="" name="cb"></span>
+</div>
+</div>
+</div>
+<br><br><br>
+
+<div class="form-row">
+<div class="form-check">
+    <div class="col-sm-offset-2 col-sm-3">
     <span class="info"><i class="fa fa-info-circle" aria-hidden="true"></i></span><span class="qtext"> Have you started taking any non-prescription or herbal medications?</span>
+  </div>
+<div class="col-sm-7">
+    <span class="switch"><input class="form-check-input" type="checkbox" value="" name="cb"></span>
+</div>
+</div>
+</div>
+<br><br><br>
+
+<div class="form-row">
+<div class="form-check">
+    <div class="col-sm-offset-2 col-sm-3">
+    <span class="info"><i class="fa fa-info-circle" aria-hidden="true"></i></span><span class="qtext"> Have you been admitted to hospital or had any surgical procedure?</span>
   </div>
 <div class="col-sm-7">
     <span class="switch"><input class="form-check-input" type="checkbox" value="" name="cb"></span>
