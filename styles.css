@@ -1,10 +1,16 @@
+
 .info {
   color: blue;
 }
 
 .qtext {
   font-weight: bold;
-  font-size: 1.1em;
+  font-size: 1.1rem;
+}
+
+.ten {
+  margin-left: 1.3rem;
+  width:50%;
 }
 
 .fifty {
