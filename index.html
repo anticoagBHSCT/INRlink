@@ -24,6 +24,8 @@
 <script src="https://use.fontawesome.com/7f77168816.js"></script>
 <script src="jquery.toast.min.js"></script>
 <script src="bootstrap-switch.min.js"></script>
+<script src="moment.min.js"></script>
+<script src="bootstrap-datetimepicker.min.js"></script>
   <link rel="stylesheet" href="styles.css">
   <title>RBHSC INR Capture</title>
 </head>
@@ -95,7 +97,7 @@
   <div class="form-group">
     <div class="col-sm-4">
     <select class="form-control ten" id="month">
-      <option selected>Month</option>
+      <option selected disabled>Month</option>
 <option value="Jan">Jan</option>
 <option value="Feb">Feb</option>
 <option value="Mar">Mar</option>
@@ -114,12 +116,37 @@
   <div class="form-group">
     <div class="col-sm-4">
     <select class="form-control ten" id="year">
-      <option selected>Year</option>
-      <option>2017</option>
-      <option>2016</option>
-      <option>2015</option>
-      <option>2014</option>
-      <option>2013</option>
+      <option selected disabled>Year</option>
+      <option value="2017">2017</option>
+      <option value="2016">2016</option>
+      <option value="2015">2015</option>
+      <option value="2014">2014</option>
+      <option value="2013">2013</option>
+      <option value="2012">2012</option>
+      <option value="2011">2011</option>
+      <option value="2010">2010</option>
+      <option value="2009">2009</option>
+      <option value="2008">2008</option>
+      <option value="2007">2007</option>
+      <option value="2006">2006</option>
+      <option value="2005">2005</option>
+      <option value="2004">2004</option>
+      <option value="2003">2003</option>
+      <option value="2002">2002</option>
+      <option value="2001">2001</option>
+      <option value="2000">2000</option>
+      <option value="1999">1999</option>
+      <option value="1998">1998</option>
+      <option value="1997">1997</option>
+      <option value="1996">1996</option>
+      <option value="1995">1995</option>
+      <option value="1994">1994</option>
+      <option value="1993">1993</option>
+      <option value="1992">1992</option>
+      <option value="1990">1990</option>
+      <option value="1989">1989</option>
+      <option value="1988">1988</option>
+      <option value="1987">1987</option>
     </select>
   </div>
   </div>
@@ -128,7 +155,7 @@
   <div class="form-group">
     <label class="control-label col-sm-2" for="pwd">Date</label>
     <div class="col-sm-8">
-      <input type="text" class="form-control fifty" id="date" placeholder="Date">
+      <input type="text" class="form-control fifty" id="datepicker" placeholder="Date">
     </div>
   </div>
   <div class="form-group">
@@ -220,12 +247,20 @@
       <button id="submit" class="btn btn-primary">Post Answers <i class="fa fa-paper-plane" aria-hidden="true"></i></button>
     </div>
   </div>
+  <br>
+  <hr>
+  <span>BHSCT anticoagulant clinic | <span id="yr"></span>&reg;</span>
 </body>
 <script>
+d = new Date();
+document.getElementById('yr').innerHTML = d.getFullYear();
+$(function () {
+    $('#datepicker').datetimepicker({useCurrent: true, format:'dddd Do  MMM YYYY'});
+});
   $('.form-check-input').bootstrapSwitch({onColor: 'danger', onText: 'Yes', offText: 'No'});
   $('#submit').click(function(){$.toast({
 heading: 'Success',
-text: 'The INR has been submitted',
+text: 'The INR has been submitted. Please await confirmation email/text from the hospital.',
 showHideTransition: 'slide',
 icon: 'success'
   });});
