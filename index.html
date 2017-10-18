@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,15 +21,16 @@
   <link rel="stylesheet" href="bootstrap-switch.min.css">
   <link rel="stylesheet" href="jquery.toast.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script src="https://use.fontawesome.com/7f77168816.js"></script>
-<script src="jquery.toast.min.js"></script>
-<script src="bootstrap-switch.min.js"></script>
-<script src="moment.min.js"></script>
-<script src="bootstrap-datetimepicker.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://use.fontawesome.com/7f77168816.js"></script>
+  <script src="jquery.toast.min.js"></script>
+  <script src="bootstrap-switch.min.js"></script>
+  <script src="moment.min.js"></script>
+  <script src="bootstrap-datetimepicker.min.js"></script>
   <link rel="stylesheet" href="styles.css">
   <title>RBHSC INR Capture</title>
 </head>
+
 <body>
   <nav class="navbar navbar-inverse">
     <div class="container-fluid">
@@ -42,23 +44,24 @@
       </ul>
     </div>
   </nav>
-<div class="col-sm-12">
-  <h2>Record your INR.</h2>
-  <span class="info"><i class="fa fa-info-circle" aria-hidden="true"></i><span> Please answer all questions</span></span>
-  <hr>
-</div>
-<form class="form-horizontal">
-  <div class="form-group">
-    <label class="control-label col-sm-2" for="pin">PIN</label>
-    <div class="col-sm-8">
-      <input type="number" class="form-control fifty" id="pin" placeholder="Enter PIN">
-    </div>
+  <div class="col-sm-12">
+    <h2>Record your INR.</h2>
+    <span class="info"><i class="fa fa-info-circle" aria-hidden="true"></i><span> Please answer all questions</span></span>
+    <hr>
   </div>
+  <form class="form-horizontal">
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="pin">PIN</label>
+      <div class="col-sm-8">
+        <input type="number" class="form-control fifty" id="pin" placeholder="Enter PIN">
+      </div>
+    </div>
 
     <div class="form-inline form-group">
-    <label class="control-label col-sm-2">DOB</label>
-  <div class="form-group"><div class="col-sm-4">
-    <select class="form-control ten" id="day">
+      <label class="control-label col-sm-2">DOB</label>
+      <div class="form-group">
+        <div class="col-sm-4">
+          <select class="form-control ten" id="day">
       <option selected disabled>Day</option>
       <option value="1">1</option>
       <option value="2">2</option>
@@ -92,11 +95,11 @@
       <option value="30">30</option>
       <option value="31">31</option>
     </select>
-  </div>
-</div>
-  <div class="form-group">
-    <div class="col-sm-4">
-    <select class="form-control ten" id="month">
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-4">
+          <select class="form-control ten" id="month">
       <option selected disabled>Month</option>
 <option value="Jan">Jan</option>
 <option value="Feb">Feb</option>
@@ -111,11 +114,11 @@
 <option value="Nov">Nov</option>
 <option value="Dec">Dec</option>
     </select>
-  </div>
-  </div>
-  <div class="form-group">
-    <div class="col-sm-4">
-    <select class="form-control ten" id="year">
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-4">
+          <select class="form-control ten" id="year">
       <option selected disabled>Year</option>
       <option value="2017">2017</option>
       <option value="2016">2016</option>
@@ -148,100 +151,100 @@
       <option value="1988">1988</option>
       <option value="1987">1987</option>
     </select>
-  </div>
-  </div>
+        </div>
+      </div>
 
-</div>
-  <div class="form-group">
-    <label class="control-label col-sm-2" for="pwd">Date</label>
-    <div class="col-sm-8">
-      <input type="text" class="form-control fifty" id="datepicker" placeholder="Date">
     </div>
-  </div>
-  <div class="form-group">
-    <label class="control-label col-sm-2" for="pwd">INR</label>
-    <div class="col-sm-8">
-      <input type="number" step="0.1" class="form-control fifty" id="inr" placeholder="Enter INR value">
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="pwd">Date</label>
+      <div class="col-sm-8">
+        <input type="text" class="form-control fifty" id="datepicker" placeholder="Date">
+      </div>
     </div>
-  </div>
-<br>
-<div class="form-row">
-<div class="form-check">
-    <div class="col-sm-offset-2 col-sm-3">
-    <span class="info"><i class="fa fa-info-circle" aria-hidden="true"></i></span><span class="qtext"> Have you missed any warfarin doses?</span>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="pwd">INR</label>
+      <div class="col-sm-8">
+        <input type="number" step="0.1" class="form-control fifty" id="inr" placeholder="Enter INR value">
+      </div>
     </div>
-<div class="col-sm-7">
-    <span class="switch"><input class="form-check-input" type="checkbox" value="" name="cb"></span>
-</div>
-</div>
-</div>
-<br><br><br>
-<div class="form-row">
-<div class="form-check">
-    <div class="col-sm-offset-2 col-sm-3">
-    <span class="info"><i class="fa fa-info-circle" aria-hidden="true"></i></span><span class="qtext"> Have you taken too many warfarin tablets?</span>
-  </div>
-<div class="col-sm-7">
-    <span class="switch"><input class="form-check-input" type="checkbox" value="" name="cb"></span>
-</div>
-</div>
-</div>
-<br><br><br>
+    <br>
+    <div class="form-row">
+      <div class="form-check">
+        <div class="col-sm-offset-2 col-sm-3">
+          <span class="info"><i class="fa fa-info-circle" aria-hidden="true"></i></span><span class="qtext"> Have you missed any warfarin doses?</span>
+        </div>
+        <div class="col-sm-7">
+          <span class="switch"><input class="form-check-input" type="checkbox" value="" name="cb"></span>
+        </div>
+      </div>
+    </div>
+    <br><br><br>
+    <div class="form-row">
+      <div class="form-check">
+        <div class="col-sm-offset-2 col-sm-3">
+          <span class="info"><i class="fa fa-info-circle" aria-hidden="true"></i></span><span class="qtext"> Have you taken too many warfarin tablets?</span>
+        </div>
+        <div class="col-sm-7">
+          <span class="switch"><input class="form-check-input" type="checkbox" value="" name="cb"></span>
+        </div>
+      </div>
+    </div>
+    <br><br><br>
 
-<div class="form-row">
-<div class="form-check">
-    <div class="col-sm-offset-2 col-sm-3">
-    <span class="info"><i class="fa fa-info-circle" aria-hidden="true"></i></span><span class="qtext"> Have you experienced any bleeding or bruising?</span>
-  </div>
-<div class="col-sm-7">
-    <span class="switch"><input class="form-check-input" type="checkbox" value="" name="cb"></span>
-</div>
-</div>
-</div>
-<br><br><br>
+    <div class="form-row">
+      <div class="form-check">
+        <div class="col-sm-offset-2 col-sm-3">
+          <span class="info"><i class="fa fa-info-circle" aria-hidden="true"></i></span><span class="qtext"> Have you experienced any bleeding or bruising?</span>
+        </div>
+        <div class="col-sm-7">
+          <span class="switch"><input class="form-check-input" type="checkbox" value="" name="cb"></span>
+        </div>
+      </div>
+    </div>
+    <br><br><br>
 
-<div class="form-row">
-<div class="form-check">
-    <div class="col-sm-offset-2 col-sm-3">
-    <span class="info"><i class="fa fa-info-circle" aria-hidden="true"></i></span><span class="qtext"> Have you had any changes to your medications?</span>
-  </div>
-<div class="col-sm-7">
-    <span class="switch"><input class="form-check-input" type="checkbox" value="" name="cb"></span>
-</div>
-</div>
-</div>
-<br><br><br>
+    <div class="form-row">
+      <div class="form-check">
+        <div class="col-sm-offset-2 col-sm-3">
+          <span class="info"><i class="fa fa-info-circle" aria-hidden="true"></i></span><span class="qtext"> Have you had any changes to your medications?</span>
+        </div>
+        <div class="col-sm-7">
+          <span class="switch"><input class="form-check-input" type="checkbox" value="" name="cb"></span>
+        </div>
+      </div>
+    </div>
+    <br><br><br>
 
-<div class="form-row">
-<div class="form-check">
-    <div class="col-sm-offset-2 col-sm-3">
-    <span class="info"><i class="fa fa-info-circle" aria-hidden="true"></i></span><span class="qtext"> Have you started taking any non-prescription or herbal medications?</span>
-  </div>
-<div class="col-sm-7">
-    <span class="switch"><input class="form-check-input" type="checkbox" value="" name="cb"></span>
-</div>
-</div>
-</div>
-<br><br><br>
+    <div class="form-row">
+      <div class="form-check">
+        <div class="col-sm-offset-2 col-sm-3">
+          <span class="info"><i class="fa fa-info-circle" aria-hidden="true"></i></span><span class="qtext"> Have you started taking any non-prescription or herbal medications?</span>
+        </div>
+        <div class="col-sm-7">
+          <span class="switch"><input class="form-check-input" type="checkbox" value="" name="cb"></span>
+        </div>
+      </div>
+    </div>
+    <br><br><br>
 
-<div class="form-row">
-<div class="form-check">
-    <div class="col-sm-offset-2 col-sm-3">
-    <span class="info"><i class="fa fa-info-circle" aria-hidden="true"></i></span><span class="qtext"> Have you been admitted to hospital or had any surgical procedure?</span>
-  </div>
-<div class="col-sm-7">
-    <span class="switch"><input class="form-check-input" type="checkbox" value="" name="cb"></span>
-</div>
-</div>
-</div>
-<br><br><br>
-<div class="form-group">
+    <div class="form-row">
+      <div class="form-check">
+        <div class="col-sm-offset-2 col-sm-3">
+          <span class="info"><i class="fa fa-info-circle" aria-hidden="true"></i></span><span class="qtext"> Have you been admitted to hospital or had any surgical procedure?</span>
+        </div>
+        <div class="col-sm-7">
+          <span class="switch"><input class="form-check-input" type="checkbox" value="" name="cb"></span>
+        </div>
+      </div>
+    </div>
+    <br><br><br>
+    <div class="form-group">
       <div class="col-sm-offset-2 col-sm-6">
-  <label class="info" for="comment">Please enter details for any Yes answers</label>
-  <textarea class="form-control eighty" rows="3" id="comment"></textarea>
-</div>
-</div>
-</form>
+        <label class="info" for="comment">Please enter details for any Yes answers</label>
+        <textarea class="form-control eighty" rows="3" id="comment"></textarea>
+      </div>
+    </div>
+  </form>
   <div class="form-group">
     <div class="col-sm-offset-2 col-sm-10">
       <button id="submit" class="btn btn-primary">Post Answers <i class="fa fa-paper-plane" aria-hidden="true"></i></button>
